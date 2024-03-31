@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.studymaterial"
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
 
     <application
+
+        android:requestLegacyExternalStorage="true"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -14,6 +19,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StudyMaterial"
         tools:targetApi="31">
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <activity
+            android:name=".JavaScreen"
+            android:exported="false" />
+        <activity
+            android:name=".Phpcreen"
+            android:exported="false" />
+        <activity
+            android:name=".ReactScreen"
+            android:exported="false" />
+        <activity
+            android:name=".Flutter"
+            android:exported="false" />
+        <activity
+            android:name=".FirstBookScreen"
+            android:exported="false" />
+        <activity
+            android:name=".BookCategory"
+            android:exported="false" />
         <activity
             android:name=".ProfileScreen"
             android:exported="false" />
@@ -35,6 +67,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
     </application>
 
 </manifest>

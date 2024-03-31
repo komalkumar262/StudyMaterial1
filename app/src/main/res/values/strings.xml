@@ -1,3 +1,35 @@
 <resources>
     <string name="app_name">StudyMaterial</string>
+
+
+    <string name="large_text">Python is an interpreted,\n high-level, general-purpose programming language\n. Its design philosophy emphasizes code readability with its notable use of significant whitespace. Its language constructs and object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects.
+        Python is dynamically typed and garbage-collected. It supports multiple programming paradigms, including structured (particularly, procedural), object-oriented, and functional programming. Python is often described as a "batteries included" language due to its comprehensive standard library.
+        Python was created in the late 1980s by Guido van Rossum as a successor to the ABC programming language. Python 2.0, released in 2000, introduced features such as a new memory management system and support for Unicode. Python 3.0, released in 2008, was a major revision of the language that is not completely backward-compatible with Python 2.
+        Python is widely used in many applications, including web development, software development, machine learning, data science, and artificial intelligence. It is also a popular language for teaching programming
+
+        Here are some of the advantages of using Python:
+        Easy to learn and use: Python has a simple syntax that is easy to learn, even for beginners.
+        Versatile: Python can be used for a wide variety of tasks, including web development, software development, data science, and machine learning.
+        Powerful: Python is a powerful language that can be used to create complex applications.
+        Free and open source: Python is free and open source software, which means that it is freely available to use and distribute.
+        Large community: Python has a large and active community of users and developers, which means that there are many resources available to help you learn and use the language.
+    </string>
+
+    <string name="large_text_java">
+        Java is a general-purpose, class-based, object-oriented programming language designed for having lesser implementation dependencies. It is a computing platform that allows application developers to write once, run anywhere (WORA), meaning that compiled Java code can run on all platforms that support Java without the need for recompilation.
+        Java is a high-level language, meaning that its syntax is designed to be easy for humans to read and write. It is also a compiled language, meaning that Java code is converted into machine code before it can be executed.
+        Java is one of the most popular programming languages in the world, and it is used to develop a wide variety of applications, including web applications, mobile applications, desktop applications, and enterprise software.
+        Here are some of the key features of Java:
+        Platform independent:
+        Java programs can run on any platform that has a Java Virtual Machine (JVM). This makes Java a very portable language, and it is one of the reasons why it is so popular for developing web applications.
+        Object-oriented:
+        Java is an object-oriented language, which means that it is based on the concept of objects. Objects are self-contained entities that contain data and code. This makes Java code very modular and reusable.
+        Robust and secure:
+        Java is a very robust and secure language. It has a number of features that make it difficult for programmers to make mistakes, and it also has a number of security features that make Java applications difficult to hack.
+        Multithreaded:
+        Java supports multithreading, which means that Java programs can run multiple tasks at the same time. This makes Java a very efficient language for developing applications that need to handle a lot of concurrent requests.
+        Distributed:
+        Java is a distributed language, which means that Java programs can be distributed across multiple computers. This makes Java a very good language for developing large-scale applications.
+        Java is a powerful and versatile language that can be used to develop a wide variety of applications. It is a good choice for both beginners and experienced programmers.
+    </string>
 </resources>

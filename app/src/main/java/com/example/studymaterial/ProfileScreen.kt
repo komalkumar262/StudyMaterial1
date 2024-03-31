@@ -3,6 +3,7 @@ package com.example.studymaterial
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import com.google.firebase.auth.FirebaseAuth
 
@@ -11,6 +12,14 @@ class ProfileScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile_screen)
+
+        val gotoHomePage = findViewById<Button>(R.id.button)
+        gotoHomePage.setOnClickListener{
+            val intent = Intent(applicationContext,BookCategory ::class.java)
+            startActivity(intent)
+        }
+
+
         // Initialize Firebase Auth
         auth = FirebaseAuth.getInstance()
         // Check if user is logged in

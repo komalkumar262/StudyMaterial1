@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookCategory">
+
+
+
+
+    <!-- Add more ImageView and TextView pairs here for the 2x3 grid -->
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.152"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.08" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="343dp"
+        android:layout_height="7dp"
+        android:background="?android:attr/listDivider"
+        android:foreground="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.647"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.154" />
+
+    <TableLayout
+        android:layout_width="386dp"
+        android:layout_height="604dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="10dp"
+        android:background="#B6B6B2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <TableRow
+            android:id="@+id/python"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/rowImageView6"
+                android:layout_width="184dp"
+                android:layout_height="103dp"
+                android:src="@drawable/img" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:text="Advanced Python"
+                android:textColor="@color/black" />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <TableRow
+            android:id="@+id/java"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/rowImageView"
+                android:layout_width="184dp"
+                android:layout_height="103dp"
+                android:src="@drawable/img_7" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="8dp"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:text="Java with DSA"
+                android:textColor="@color/black" />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <TableRow
+            android:id="@+id/Flutter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/rowImageView2"
+                android:layout_width="184dp"
+                android:layout_height="103dp"
+                android:src="@drawable/img_1" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="8dp"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:text="Flutter Cross Platform"
+                android:textColor="@color/black" />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <TableRow
+            android:id="@+id/React"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/rowImageView3"
+                android:layout_width="184dp"
+                android:layout_height="103dp"
+                android:src="@drawable/img_8" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="8dp"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:text="Learn React with Projects"
+                android:textColor="@color/black" />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <TableRow
+            android:id="@+id/php"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/rowImageView4"
+                android:layout_width="184dp"
+                android:layout_height="103dp"
+                android:src="@drawable/img_5" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:text="Php Web Scripting"
+                android:textColor="@color/black" />
+        </TableRow>
+
+
+    </TableLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
