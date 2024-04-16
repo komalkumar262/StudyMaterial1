@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">StudyMaterial</string>
 
-
     <string name="large_text">Python is an interpreted,\n high-level, general-purpose programming language\n. Its design philosophy emphasizes code readability with its notable use of significant whitespace. Its language constructs and object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects.
         Python is dynamically typed and garbage-collected. It supports multiple programming paradigms, including structured (particularly, procedural), object-oriented, and functional programming. Python is often described as a "batteries included" language due to its comprehensive standard library.
         Python was created in the late 1980s by Guido van Rossum as a successor to the ABC programming language. Python 2.0, released in 2000, introduced features such as a new memory management system and support for Unicode. Python 3.0, released in 2008, was a major revision of the language that is not completely backward-compatible with Python 2.
@@ -32,4 +31,100 @@
         Java is a distributed language, which means that Java programs can be distributed across multiple computers. This makes Java a very good language for developing large-scale applications.
         Java is a powerful and versatile language that can be used to develop a wide variety of applications. It is a good choice for both beginners and experienced programmers.
     </string>
+    <string name="flutter">
+        The Flutter framework consists of both a software development kit (SDK) and their widget-based UI library. This library consists of various reusable UI elements,
+        such as sliders, buttons, and text inputs.
+        Developers building mobile applications with the Flutter
+        framework will do so using a programming language called Dart.
+        With a syntax like JavaScript, Dart is a typed object programming language
+        that focuses on front-end development.
+        Although Flutter is less adopted than other popular test automation frameworks,
+        an increasing number of tech companies have started realizing its potential.
+        Some notable Flutter applications include Google Ads, eBay Motors, Philips Hue,
+        and Xianyu from Alibaba.
+        Flutter Framework Architecture
+        Flutter is comprised of three architectural layers. Here is a quick breakdown of each one:
+
+        Framework. This is the more “visible” part of Flutter’s technology. As already mentioned, this layer of Flutter’s architecture in based on Dart. The rich set of libraries in this layer can be divided into multiple layers, such as the basic foundational classes, the widget layer, and the rendering layer.
+        Engine. This layer is written in C/C++. The engine provides a low-level implementation of the Flutter framework, as well as other core APIs, e.g. graphics, accessibility support, text layout, and plugin architecture.
+        Embedder. The embedded is a platform-specific layer that allows the Flutter app to run on any OS.
+    </string>
+    <string name="react">
+        React.js is an open-source JavaScript library,
+        crafted with precision by Facebook, that aims to
+        simplify the intricate process of building interactive user interfaces.
+        Imagine a user interface built with React as a collection of components,
+        each responsible for outputting a small, reusable piece of HTML code.
+        In React, you develop your applications by creating reusable components that you can think of as independent Lego blocks. These components are individual pieces of a final interface, which, when assembled, form the application’s entire user interface.
+        React’s primary role in an application is to handle the view layer of that application just like the V in a model-view-controller (MVC) pattern by providing the best and most efficient rendering execution. Rather than dealing with the whole user interface as a single unit, React.js encourages developers to separate these complex UIs into individual reusable components that form the building blocks of the whole UI. In doing so, the ReactJS framework combines the speed and efficiency of JavaScript with a more efficient method of manipulating the DOM to render web pages faster and create highly dynamic and responsive web applications
+        A Brief History of React.js
+        Back in 2011, Facebook had a massive user base and faced a challenging task. It wanted to offer users a richer user experience by building a more dynamic and more responsive user interface that was fast and highly performant.
+        Jordan Walke, one of Facebook’s software engineers, created React to do just that. React simplified the development process by providing a more organized and structured way of building dynamic and interactive user interfaces with reusable components.
+        Facebook’s newsfeed used it first. Due to its revolutionary approach to DOM manipulation and user interfaces, React dramatically changed Facebook’s approach to web development and quickly became popular in JavaScript’s ecosystem after its release to the open-source community.
+        What does React.js do?
+        Typically, you request a webpage by typing its URL into your web browser. Your browser then sends a request for that webpage, which your browser renders. If you click a link on that webpage to go to another page on the website, a new request is sent to the server to get that new page.
+        This back-and-forth loading pattern between your browser (the client) and the server continues for every new page or resource you try to access on a website. This typical approach to loading websites works just fine, but consider a very data-driven website. The back and forth loading of the full webpage would be redundant and create a poor user experience.
+        Additionally, when data changes in a traditional JavaScript application, it requires manual DOM manipulation to reflect these changes. You must identify which data changed and update the DOM to reflect those changes, resulting in a full page reload.
+        React takes a different approach by letting you build what’s known as a single-page application (SPA). A single-page application loads only a single HTML document on the first request. Then, it updates the specific portion, content, or body of the webpage that needs updating using JavaScript.
+        This pattern is known as client-side routing because the client doesn’t have to reload the full webpage to get a new page each time a user makes a new request. Instead, React intercepts the request and only fetches and changes the sections that need changing without having to trigger a full page reload. This approach results in better performance and a more dynamic user experience.
+        React relies on a virtual DOM, which is a copy of the actual DOM. React’s virtual DOM is immediately reloaded to reflect this new change whenever there is a change in the data state. After which, React compares the virtual DOM to the actual DOM to figure out what exactly has changed..
+    </string>
+
+    <string name="php">
+        Hypertext Preprocessor (PHP) is an open-source, free server-side scripting language widely used in web development. According to Web Technology Surveys, PHP is used by 78.1% of all websites, including high-traffic websites like Facebook and Wikipedia.
+
+Anyone can benefit from learning about PHP, but it is even more essential for those interested in web programming. PHP is available on all major operating systems, such as Linux, Microsoft Windows, and macOS. Most web servers, including Apache and IIS, also support PHP.
+
+One of the main benefits of using PHP is advancing the customization of a WordPress site. Other features include great online support and documentation, so even beginners can learn PHP quickly.
+
+This article will go over the basics of PHP. By the end of it, you will understand the full benefits of PHP and how to utilize it in WordPress.
+
+PHP
+Mar 01, 2024
+
+Astari S.
+
+6min Read
+
+What Is PHP: Understanding the Scripting Language
+What Is PHP: Understanding the Scripting Language
+Hypertext Preprocessor (PHP) is an open-source, free server-side scripting language widely used in web development. According to Web Technology Surveys, PHP is used by 78.1% of all websites, including high-traffic websites like Facebook and Wikipedia.
+
+Anyone can benefit from learning about PHP, but it is even more essential for those interested in web programming. PHP is available on all major operating systems, such as Linux, Microsoft Windows, and macOS. Most web servers, including Apache and IIS, also support PHP.
+
+One of the main benefits of using PHP is advancing the customization of a WordPress site. Other features include great online support and documentation, so even beginners can learn PHP quickly.
+
+This article will go over the basics of PHP. By the end of it, you will understand the full benefits of PHP and how to utilize it in WordPress.
+
+
+What Is PHP? A Video Overview
+Scripting Language vs Programming Language
+What Is Server-Side Scripting?
+Why Use PHP?
+How Is PHP Used in WordPress?
+Do You Need to Know PHP to Use WordPress?
+What Is PHP FAQ
+Is PHP a Coding Language?
+What Does PHP Mean?
+Why Should I Use PHP?
+What Is PHP? A Video Overview
+For a quick, yet extensive overview on the subject, check out our video on PHP.
+
+
+youtube channel logo
+SUBSCRIBE FOR MORE EDUCATIONAL VIDEOS!
+Hostinger Academy
+subscribe
+Subscribe
+Scripting Language vs Programming Language
+PHP is a scripting language, which is one of many programming languages. Note that all scripting languages are programming languages, but not all programming languages are scripting languages.
+
+A programming language is a formal computer language that combines instructions to generate a specific output. A programming language has all the necessary features to develop web applications. Each language also has distinct features and provides different functions.
+
+A scripting language incorporates additional functionalities for a specific action or function. It interprets scripts embedded into other software environments at runtime and is more straightforward with its code.
+
+The primary difference between a programming and a scripting language is the execution. Programming languages run independently to convert into a computer language that a machine can read and execute. Scripting languages run inside another program and use an interpreter.
+    </string>
+
+
 </resources>

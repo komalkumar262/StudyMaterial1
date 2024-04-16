@@ -9,7 +9,7 @@
 
 
 
-    <!-- Add more ImageView and TextView pairs here for the 2x3 grid -->
+    <!-- Add morxxe ImageView and TextView pairs here for the 2x3 grid -->
 
     <TextView
         android:id="@+id/textView3"
