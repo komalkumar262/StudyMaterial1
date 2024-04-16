@@ -56,7 +56,7 @@ class HomeScreen : AppCompatActivity() {
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d("CreateUser", "createUserWithEmail:success")
-                    val intent = Intent(this, ProfileScreen::class.java)
+                    val intent = Intent(this, BookCategory::class.java)
                     startActivity(intent)
                     finish()
                 } else {

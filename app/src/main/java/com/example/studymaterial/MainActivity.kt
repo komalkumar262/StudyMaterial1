@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         // Check if user is logged in
         if (auth.currentUser != null) {
             // User is already logged in, navigate to TweetScreen
-            val intent = Intent(this, ProfileScreen::class.java)
+            val intent = Intent(this, BookCategory::class.java)
             startActivity(intent)
             finish()
         } else {

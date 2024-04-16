@@ -50,7 +50,7 @@ class LoginScreen : AppCompatActivity() {
 
     private fun navigateToNextActivity() {
         // Intent to navigate to the next activity
-        val intent = Intent(this, Dashboard::class.java)
+        val intent = Intent(this, BookCategory::class.java)
         startActivity(intent)
         finish()
     }

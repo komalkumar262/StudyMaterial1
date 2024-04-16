@@ -16,14 +16,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Category"
-        android:textStyle="bold"
         android:textSize="30dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.152"
+        app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.08" />
+        app:layout_constraintVertical_bias="0.056" />
 
     <View
         android:id="@+id/divider"
@@ -39,13 +39,14 @@
         app:layout_constraintVertical_bias="0.154" />
 
     <TableLayout
+        android:id="@+id/tableLayout"
         android:layout_width="386dp"
         android:layout_height="604dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="10dp"
-        android:background="#B6B6B2"
+        android:background="#CACAC8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,18 +65,18 @@
                 android:id="@+id/rowImageView6"
                 android:layout_width="184dp"
                 android:layout_height="103dp"
-                android:src="@drawable/img" />
+                android:src="@drawable/python" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:textSize="30dp"
-                android:textStyle="bold"
                 android:padding="8dp"
                 android:text="Advanced Python"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                android:textStyle="bold" />
         </TableRow>
 
         <View
@@ -91,7 +92,7 @@
                 android:id="@+id/rowImageView"
                 android:layout_width="184dp"
                 android:layout_height="103dp"
-                android:src="@drawable/img_7" />
+                android:src="@drawable/java" />
 
             <TextView
                 android:layout_width="0dp"
@@ -99,10 +100,10 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:padding="8dp"
-                android:textSize="30dp"
-                android:textStyle="bold"
                 android:text="Java with DSA"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                android:textStyle="bold" />
         </TableRow>
 
         <View
@@ -118,7 +119,7 @@
                 android:id="@+id/rowImageView2"
                 android:layout_width="184dp"
                 android:layout_height="103dp"
-                android:src="@drawable/img_1" />
+                android:src="@drawable/flutter" />
 
             <TextView
                 android:layout_width="0dp"
@@ -126,10 +127,10 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:padding="8dp"
-                android:textSize="30dp"
-                android:textStyle="bold"
                 android:text="Flutter Cross Platform"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                android:textStyle="bold" />
         </TableRow>
 
         <View
@@ -145,7 +146,7 @@
                 android:id="@+id/rowImageView3"
                 android:layout_width="184dp"
                 android:layout_height="103dp"
-                android:src="@drawable/img_8" />
+                android:src="@drawable/react" />
 
             <TextView
                 android:layout_width="0dp"
@@ -153,10 +154,10 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:padding="8dp"
-                android:textSize="30dp"
-                android:textStyle="bold"
                 android:text="Learn React with Projects"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                android:textStyle="bold" />
         </TableRow>
 
         <View
@@ -172,22 +173,38 @@
                 android:id="@+id/rowImageView4"
                 android:layout_width="184dp"
                 android:layout_height="103dp"
-                android:src="@drawable/img_5" />
+                android:src="@drawable/php" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:textSize="30dp"
-                android:textStyle="bold"
                 android:padding="8dp"
                 android:text="Php Web Scripting"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                android:textStyle="bold" />
         </TableRow>
 
 
     </TableLayout>
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="72dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded"
+        android:backgroundTint="#EFECEC"
+        android:padding="7dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/profile"
+        app:layout_constraintBottom_toBottomOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.929"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.057" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
