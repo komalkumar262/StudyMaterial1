@@ -19,6 +19,12 @@ class ProfileScreen : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val logoutButton: Button = findViewById(R.id.logout)
+        logoutButton.setOnClickListener {
+            // Call logout function
+            logout()
+        }
+
 
         // Initialize Firebase Auth
         auth = FirebaseAuth.getInstance()
@@ -42,6 +48,14 @@ class ProfileScreen : AppCompatActivity() {
 
 
 
+    }
+
+    private fun logout() {
+        auth.signOut()
+        // You can navigate the user to the login screen or perform any other action
+        // For example:
+        startActivity(Intent(this, MainActivity::class.java))
+        finish() // Finish the current activity to prevent the user from going back to it using the back button
     }
 
 

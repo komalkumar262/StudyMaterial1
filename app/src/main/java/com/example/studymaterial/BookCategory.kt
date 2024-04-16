@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TableRow
 
 class BookCategory : AppCompatActivity() {
@@ -16,6 +17,7 @@ class BookCategory : AppCompatActivity() {
         val gotoReact = findViewById<TableRow>(R.id.React)
         val gotoPhp = findViewById<TableRow>(R.id.php)
         val gotoJava = findViewById<TableRow>(R.id.java)
+        val gotoProfile = findViewById<ImageButton>(R.id.imageButton)
 
 
         gotoPython.setOnClickListener{
@@ -36,6 +38,10 @@ class BookCategory : AppCompatActivity() {
         }
         gotoJava.setOnClickListener{
             val intent = Intent(applicationContext, JavaScreen::class.java)
+            startActivity(intent)
+        }
+        gotoProfile.setOnClickListener{
+            val intent = Intent(applicationContext, ProfileScreen::class.java)
             startActivity(intent)
         }
 
