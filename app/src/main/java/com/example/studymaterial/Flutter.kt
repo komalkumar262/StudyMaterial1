@@ -15,9 +15,15 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.FileProvider
+import com.google.firebase.auth.FirebaseAuth
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import java.text.SimpleDateFormat
+import java.util.Calendar
+import java.util.Locale
 
 
 class Flutter : AppCompatActivity() {
@@ -27,7 +33,8 @@ class Flutter : AppCompatActivity() {
 
         val textViewLargeText: TextView = findViewById(R.id.textViewLargeText)
         // Example: Setting a large amount of text
-        val largeText = getString(R.string.flutter) // Assuming you have a string resource named large_text
+        val largeText =
+            getString(R.string.flutter) // Assuming you have a string resource named large_text
         textViewLargeText.text = largeText
 
 
@@ -53,9 +60,10 @@ class Flutter : AppCompatActivity() {
 //            canvas.drawText(text, 5f, 20f, paint)
 
             val textWidth = pageInfo.pageWidth - (2 * 10)  // Calculate text width with some margin
-            val staticLayout = StaticLayout.Builder.obtain(text, 0, text.length, textPaint, textWidth)
-                .setAlignment(Layout.Alignment.ALIGN_NORMAL)
-                .build()
+            val staticLayout =
+                StaticLayout.Builder.obtain(text, 0, text.length, textPaint, textWidth)
+                    .setAlignment(Layout.Alignment.ALIGN_NORMAL)
+                    .build()
             // Draw the StaticLayout on canvas
             canvas.save()
             canvas.translate(10f, 20f) // Adjust for margins
@@ -64,17 +72,24 @@ class Flutter : AppCompatActivity() {
 
             pdfDocument.finishPage(page)
 
-            val filePath = File(getExternalFilesDir(null), "python.pdf")
+            val filePath = File(getExternalFilesDir(null), "flutter.pdf")
             try {
                 pdfDocument.writeTo(FileOutputStream(filePath))
-                Toast.makeText(this, "PDF downloaded!", Toast.LENGTH_SHORT).show()
+               // val currentTime = System.currentTimeMillis()
+                val currentTime = System.currentTimeMillis()
+                val formattedTime = formatTime(currentTime)
+                val userEmail = FirebaseAuth.getInstance().currentUser?.email
+                saveDataToDatabase(filePath.name, formattedTime, userEmail)
 
+                Toast.makeText(this, "PDF downloaded!", Toast.LENGTH_SHORT).show()
                 // Open the PDF file
                 val fileUri: Uri = FileProvider.getUriForFile(
                     this,
-                    "com.example.studymaterial"+".provider",
+                    "com.example.studymaterial" + ".provider",
                     filePath
                 )
+
+
 
                 val openIntent = Intent(Intent.ACTION_VIEW).apply {
                     setDataAndType(fileUri, "application/pdf")
@@ -86,12 +101,47 @@ class Flutter : AppCompatActivity() {
 
             } catch (e: IOException) {
                 e.printStackTrace()
-                Toast.makeText(this, "Error downloading PDF: ${e.message}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Error downloading PDF: ${e.message}", Toast.LENGTH_SHORT)
+                    .show()
             } finally {
                 pdfDocument.close()
             }
         }
     }
+
+    fun formatTime(currentTime: Long): String {
+        val sdf = SimpleDateFormat("MMMM dd yyyy hh:mm a", Locale.getDefault())
+        val calendar = Calendar.getInstance()
+        calendar.timeInMillis = currentTime
+        return sdf.format(calendar.time)
+    }
+
+    fun saveDataToDatabase(pdfFilename: String, currentTime: String, userEmail: String?) {
+        val database: FirebaseDatabase = FirebaseDatabase.getInstance("https://studymaterial-97b09-default-rtdb.firebaseio.com/")
+        val reference: DatabaseReference = database.reference
+
+        // Create a unique key for the data entry
+        val key = reference.child("downloads").push().key ?: ""
+
+        // Create a HashMap to hold the data
+        val data = HashMap<String, Any>()
+        data["pdfFilename"] = pdfFilename
+        data["currentTime"] = currentTime
+        userEmail?.let { data["userEmail"] = it }
+        Toast.makeText(this, "something went wrong", Toast.LENGTH_SHORT).show()
+
+
+        // Save the data to the database under the "downloads" node with the unique key
+        reference.child("downloads").child(key).setValue(data)
+            .addOnSuccessListener {
+                Toast.makeText(this, "Data saved succesfully", Toast.LENGTH_SHORT).show()
+            }
+            .addOnFailureListener { e ->
+                Toast.makeText(this, "Error saving data: ${e.message}", Toast.LENGTH_SHORT).show()
+
+            }
+    }
+
 
 
 }
