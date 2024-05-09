@@ -123,7 +123,7 @@ class FirstBookScreen : AppCompatActivity() {
     }
 
     fun saveDataToDatabase(pdfFilename: String, currentTime: String, userEmail: String?) {
-        val database: FirebaseDatabase = FirebaseDatabase.getInstance("https://studymaterial-97b09-default-rtdb.firebaseio.com/")
+        val database: FirebaseDatabase = FirebaseDatabase.getInstance("https://studymaterial-3555d-default-rtdb.firebaseio.com/")
         val reference: DatabaseReference = database.reference
 
         // Create a unique key for the data entry
@@ -134,7 +134,7 @@ class FirstBookScreen : AppCompatActivity() {
         data["pdfFilename"] = pdfFilename
         data["currentTime"] = currentTime
         userEmail?.let { data["userEmail"] = it }
-        Toast.makeText(this, "something went wrong", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this, "something went wrong", Toast.LENGTH_SHORT).show()
 
 
         // Save the data to the database under the "downloads" node with the unique key

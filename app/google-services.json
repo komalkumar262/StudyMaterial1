@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "628151790564",
-    "project_id": "studymaterial-97b09",
-    "storage_bucket": "studymaterial-97b09.appspot.com"
+    "project_number": "379308550881",
+    "project_id": "studymaterial-3555d",
+    "storage_bucket": "studymaterial-3555d.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:628151790564:android:09cfa05755e5bbedd835f1",
+        "mobilesdk_app_id": "1:379308550881:android:45d2693ccd15c6a1dba5a0",
         "android_client_info": {
           "package_name": "com.example.studymaterial"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDVms6IWvC7G4QGH13vk-Lds84anShIfUo"
+          "current_key": "AIzaSyDmUPsUc8HdRZQ4M50iVnWNDdTPFolG0h0"
         }
       ],
       "services": {
